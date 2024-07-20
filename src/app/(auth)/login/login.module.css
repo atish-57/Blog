@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 500px;
+  background-color: var(--bgSoft);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  border-radius: 5px;
+}
+
+.github {
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #24292e;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.github:hover {
+  background-color: #444d56;
+}
+
+.github svg {
+  width: 24px;
+  height: 24px;
+}
