@@ -20,11 +20,10 @@ export const generateMetadata = async ({ params }) => {
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
 
-  // FETCH DATA WITH AN API
-  const post = await getPost(slug)
 
-  // FETCH DATA WITHOUT AN API
-  // const post = await getPost(slug);
+
+
+  const post = await getPost(slug);
 
   // Format date and time
   const formattedDate = new Date(post.createdAt).toLocaleDateString('en-US', {
