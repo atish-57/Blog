@@ -15,7 +15,7 @@ const AboutPage = () => {
           Pioneering the Future of Technology
         </h1>
         <p className={styles.desc}>
-          At Innovative Tech Insights, we push the boundaries of what's possible in the tech world. Our mission is to deliver groundbreaking ideas and solutions that are smarter, faster, and more efficient. We excel in delivering top-tier web and software development services, backed by years of experience and a commitment to excellence.
+          At Innovative Tech Insights, we push the boundaries of what is  possible in the tech world. Our mission is to deliver groundbreaking ideas and solutions that are smarter, faster, and more efficient. We excel in delivering top-tier web and software development services, backed by years of experience and a commitment to excellence.
         </p>
         <div className={styles.boxes}>
           <div className={styles.box}>
