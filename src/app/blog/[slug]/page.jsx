@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { getPost } from "@/lib/data";
 
 
+
 export const generateMetadata = async ({ params }) => {
   const { slug } = params;
 
@@ -18,6 +19,8 @@ export const generateMetadata = async ({ params }) => {
 
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
+
+
 
 
 
