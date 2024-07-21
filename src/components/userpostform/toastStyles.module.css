@@ -1,0 +1,28 @@
+/* toastStyles.module.css */
+
+.toastContainer {
+    /* Customize the toast container here */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  .toastSuccess {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  
+  .toastError {
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  
+  .toastMessage {
+    font-size: 16px;
+  }
+  

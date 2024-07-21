@@ -33,7 +33,6 @@ export const contactinfo = async (prevState, formData) => {
 
 
 export const addPost = async (prevState, formData) => {
-
   const { title, desc, img, slug, userId } = Object.fromEntries(formData);
 
   try {
@@ -50,11 +49,15 @@ export const addPost = async (prevState, formData) => {
     console.log("saved to db");
     revalidatePath("/blog");
     revalidatePath("/admin");
+    revalidatePath("/write");
+    return { success: true, message: "Post added successfully!" };
+
   } catch (err) {
     console.log(err);
     return { error: "Something went wrong!" };
   }
 };
+
 
 export const deletePost = async (formData) => {
   const { id } = Object.fromEntries(formData);

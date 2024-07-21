@@ -5,6 +5,7 @@ import NavLink from "./navLink/navLink";
 import { useState } from "react";
 import Image from "next/image";
 import { handleLogout } from "@/lib/action";
+
 const Links = ({ session }) => {
     const links = [
         {
@@ -27,7 +28,6 @@ const Links = ({ session }) => {
 
     const [open, setOpen] = useState(false);
 
-
     return (
         <div className={styles.container}>
             <div className={styles.links}>
@@ -36,7 +36,11 @@ const Links = ({ session }) => {
                 ))}
                 {session?.user ? (
                     <>
-                        {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
+                        {session.user.isAdmin ? (
+                            <NavLink item={{ title: "Admin", path: "/admin" }} />
+                        ) : (
+                            <NavLink item={{ title: "Write", path: "/write" }} />
+                        )}
                         <form action={handleLogout}>
                             <button className={styles.logout}>Logout</button>
                         </form>
@@ -46,7 +50,14 @@ const Links = ({ session }) => {
                 )}
             </div>
 
-            <Image style={styles.menuButton} src="/menu.png" alt="" width={30} height={30} onClick={() => setOpen(prev => !prev)} className={styles.menuButton} />
+            <Image
+                src="/menu.png"
+                alt=""
+                width={30}
+                height={30}
+                onClick={() => setOpen(prev => !prev)}
+                className={styles.menuButton}
+            />
 
             {open && (
                 <div className={styles.mobileLinks}>
@@ -55,7 +66,11 @@ const Links = ({ session }) => {
                     ))}
                     {session?.user ? (
                         <>
-                            {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
+                            {session.user.isAdmin ? (
+                                <NavLink item={{ title: "Admin", path: "/admin" }} />
+                            ) : (
+                                <NavLink item={{ title: "Write", path: "/write" }} />
+                            )}
                             <form action={handleLogout}>
                                 <button className={styles.logout}>Logout</button>
                             </form>

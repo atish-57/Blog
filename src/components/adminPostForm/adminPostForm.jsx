@@ -19,7 +19,7 @@ const AdminPostForm = ({ userId }) => {
       <input type="hidden" name="userId" value={userId} />
       <input type="text" name="title" placeholder="Title" />
       <input type="hidden" name="slug" placeholder="slug" value={generateUniqueValue()} />
-      <input type="text" name="img" placeholder="img url (www.pexels.com only)" />
+      <input type="text" name="img" placeholder="image url" />
       <textarea type="text" name="desc" placeholder="desc" rows={10} />
       <button>Add</button>
       {state?.error}
